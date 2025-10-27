@@ -11,14 +11,15 @@
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="#home">Natalia Rico</a>
-      <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-        <ul>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <button id="nav-toggle" aria-controls="primary-nav-list" aria-expanded="false" aria-label="Toggle menu">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul id="primary-nav-list" class="nav-list">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -30,64 +31,77 @@
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <!-- HERO -->
+    <section id="home" class="hero" aria-label="Introduction">
       <div class="container hero-inner">
         <div class="hero-text">
           <h1>Hi, I'm Natalia Rico</h1>
-          <p>Computer Engineering student at the University of New Mexico. I build hardware designs, embedded systems, and web tools to showcase academic and technical work.</p>
-          <p class="cta-row">
+          <p class="lead">Computer Engineering student at the University of New Mexico. I work on FPGA designs, embedded systems, and web tools to make technical work easy to explore.</p>
+          <div class="cta-row">
             <a class="btn primary" href="#projects">See my work</a>
             <a class="btn ghost" href="#contact">Get in touch</a>
-          </p>
-        </div>
-        <div class="hero-image" role="img" aria-label="Portrait or illustration">
-          <div class="placeholder-avatar">Natalia Rico</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about container">
-      <h2>About</h2>
-      <div class="about-grid">
-        <div>
-          <p>I am a Computer Engineering student at the University of New Mexico (expected 2028). My interests include digital systems design, embedded hardware, and full-stack web development. I enjoy turning technical concepts into clean, demonstrable projects — from FPGA designs to interactive dashboards.</p>
-          <p>Experience includes IT support roles and customer-facing technical positions where I supported enterprise survey tools, helped troubleshoot systems, and maintained positive user interactions.</p>
-          <p>
-            <a class="btn" href="assets/Natalia-Rico-Resume.pdf" aria-label="Download résumé">Download Résumé (PDF)</a>
-          </p>
-        </div>
-        <div>
-          <ul class="about-list">
-            <li><strong>Location:</strong> Albuquerque, NM, USA</li>
+          </div>
+          <ul class="quick-info">
             <li><strong>Email:</strong> <a href="mailto:nrico@unm.edu">nrico@unm.edu</a></li>
             <li><strong>Phone:</strong> <a href="tel:+19154070475">(915) 407-0475</a></li>
-            <li><strong>Education:</strong> B.S. Computer Engineering — University of New Mexico (Expected 2028)</li>
-            <li><strong>Current roles:</strong> UNM IT Academic Technologies (IT Support Assistant), Lowe's (Customer Service)</li>
+            <li><strong>Education:</strong> B.S. Computer Engineering — UNM (Expected 2028)</li>
           </ul>
+        </div>
+
+        <aside class="hero-card" aria-hidden="false">
+          <img src="assets/portrait-placeholder.jpg" alt="Portrait of Natalia Rico" class="hero-avatar" />
+          <div class="hero-meta">
+            <p class="role">Computer Engineering • FPGA & Embedded Systems</p>
+            <a class="btn" href="assets/Natalia-Rico-Resume.pdf" download>Download Résumé</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about container" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <div class="about-grid">
+        <div class="about-body">
+          <p>I’m a Computer Engineering student at the University of New Mexico with hands-on experience in digital logic, FPGA simulation, and technical support roles. I enjoy turning technical coursework and lab work into clear, shareable projects — whether hardware, embedded software, or web visualizations.</p>
+          <p>Currently I support enterprise survey tooling and IT assistance at UNM and work part-time in customer-facing technical roles that sharpen communication and troubleshooting skills.</p>
+        </div>
+
+        <div class="about-stats">
+          <dl>
+            <dt>Location</dt><dd>Albuquerque, NM, USA</dd>
+            <dt>Email</dt><dd><a href="mailto:nrico@unm.edu">nrico@unm.edu</a></dd>
+            <dt>Phone</dt><dd><a href="tel:+19154070475">(915) 407-0475</a></dd>
+            <dt>Expected Degree</dt><dd>B.S. Computer Engineering — 2028</dd>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="projects container">
-      <h2>Projects</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects container" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
       <div class="projects-controls">
-        <label>Filter:
-          <select id="project-filter" aria-label="Filter projects">
-            <option value="all">All</option>
-            <option value="hardware">Hardware</option>
-            <option value="web">Web</option>
-            <option value="data">Data</option>
-          </select>
-        </label>
+        <label for="project-filter">Filter:</label>
+        <select id="project-filter" aria-label="Filter projects">
+          <option value="all">All</option>
+          <option value="hardware">Hardware</option>
+          <option value="web">Web</option>
+          <option value="data">Data</option>
+        </select>
       </div>
 
       <div class="projects-grid" id="projects-grid">
         <article class="project-card" data-category="hardware">
-          <div class="project-screenshot" role="img" aria-label="8-bit ALU on FPGA">FPGA</div>
-          <div class="project-body">
-            <h3 class="project-title">8-bit ALU Design (VHDL)</h3>
-            <p class="project-desc">Designed and tested an 8-bit arithmetic logic unit using VHDL, synthesized and deployed to an FPGA board (Xilinx). Implemented arithmetic, logic, and control signals with testbenches and timing analysis.</p>
-            <p class="project-tags"><span>VHDL</span><span>FPGA</span><span>Xilinx</span></p>
+          <figure class="project-media">
+            <img src="assets/alu-screenshot.jpg" alt="8-bit ALU on FPGA board">
+            <figcaption>8-bit ALU running on Xilinx FPGA</figcaption>
+          </figure>
+          <div class="project-content">
+            <h3>8-bit ALU Design (VHDL)</h3>
+            <p class="project-desc">Implemented an 8-bit arithmetic logic unit in VHDL, created testbenches, and synthesized to a Xilinx FPGA. Verified arithmetic, logical ops, and timing constraints.</p>
+            <p class="project-meta"><span>VHDL</span> • <span>FPGA</span> • <span>Xilinx</span></p>
             <p class="project-links">
               <a href="#" target="_blank" rel="noopener">Code</a>
             </p>
@@ -95,71 +109,81 @@
         </article>
 
         <article class="project-card" data-category="web">
-          <div class="project-screenshot" role="img" aria-label="Personal portfolio screenshot">Portfolio</div>
-          <div class="project-body">
-            <h3 class="project-title">Personal Portfolio Website</h3>
-            <p class="project-desc">Responsive portfolio built with HTML, CSS, and JavaScript to showcase my academic and technical projects. Includes mobile navigation, project filtering, and a contact form.</p>
-            <p class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+          <figure class="project-media">
+            <img src="assets/portfolio-screenshot.jpg" alt="Personal portfolio screenshot">
+            <figcaption>Responsive portfolio — HTML, CSS, JS</figcaption>
+          </figure>
+          <div class="project-content">
+            <h3>Personal Portfolio Website</h3>
+            <p class="project-desc">Responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. Features project filtering, mobile nav, and accessible form UI.</p>
+            <p class="project-meta"><span>HTML</span> • <span>CSS</span> • <span>JavaScript</span></p>
             <p class="project-links">
-              <a href="https://oxlusio.github.io" target="_blank" rel="noopener">Live</a> ·
-              <a href="#" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://oxlusio.github.io" target="_blank" rel="noopener">Live</a> · <a href="#" target="_blank" rel="noopener">GitHub</a>
             </p>
           </div>
         </article>
 
         <article class="project-card" data-category="data">
-          <div class="project-screenshot" role="img" aria-label="Cost of Living Dashboard screenshot">Dashboard</div>
-          <div class="project-body">
-            <h3 class="project-title">Cost of Living Index Dashboard (ENG220)</h3>
-            <p class="project-desc">Interactive Streamlit web application that analyzes and visualizes cost-of-living data across global regions. Implemented data cleaning, plots, and user controls for comparison.</p>
-            <p class="project-tags"><span>Python</span><span>Streamlit</span><span>Data Viz</span></p>
+          <figure class="project-media">
+            <img src="assets/col-dashboard.jpg" alt="Cost of Living Dashboard screenshot">
+            <figcaption>Streamlit dashboard for cost-of-living data</figcaption>
+          </figure>
+          <div class="project-content">
+            <h3>Cost of Living Index Dashboard</h3>
+            <p class="project-desc">Interactive Streamlit application that analyzes cost-of-living datasets with visual comparisons across regions. Built data-cleaning pipeline and visualization components.</p>
+            <p class="project-meta"><span>Python</span> • <span>Streamlit</span> • <span>Data Viz</span></p>
             <p class="project-links">
-              <a href="#" target="_blank" rel="noopener">Demo</a> ·
-              <a href="#" target="_blank" rel="noopener">Code</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a> · <a href="#" target="_blank" rel="noopener">Code</a>
             </p>
           </div>
         </article>
-
-        <!-- Add more project-card elements as needed -->
       </div>
     </section>
 
-    <section id="skills" class="skills container">
-      <h2>Skills</h2>
+    <!-- SKILLS -->
+    <section id="skills" class="skills container" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
       <div class="skills-grid">
         <div>
           <h3>Languages</h3>
-          <ul><li>C</li><li>C++</li><li>Python</li><li>VHDL</li><li>HTML & CSS</li><li>JavaScript (basic)</li></ul>
+          <ul><li>C</li><li>C++</li><li>Python</li><li>VHDL</li><li>HTML/CSS</li><li>JavaScript (basic)</li></ul>
         </div>
         <div>
           <h3>Tools & Frameworks</h3>
-          <ul><li>Git / GitHub</li><li>Visual Studio Code</li><li>MATLAB</li><li>Streamlit</li><li>Linux / Command Line</li></ul>
+          <ul><li>Git / GitHub</li><li>VS Code</li><li>MATLAB</li><li>Streamlit</li><li>Linux</li></ul>
         </div>
         <div>
-          <h3>Hardware & Systems</h3>
-          <ul><li>Digital Logic Design</li><li>FPGA Simulation (Xilinx)</li><li>Microcontrollers (Arduino, Raspberry Pi)</li></ul>
+          <h3>Hardware</h3>
+          <ul><li>Digital Logic Design</li><li>FPGA (Xilinx)</li><li>Arduino / Raspberry Pi</li></ul>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact container">
-      <h2>Contact</h2>
+    <!-- CONTACT -->
+    <section id="contact" class="contact container" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
       <div class="contact-grid">
         <form id="contact-form" class="contact-form" novalidate>
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required />
-          </label>
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+          </div>
+
           <label>
             <span>Message</span>
             <textarea name="message" rows="5" required></textarea>
           </label>
-          <button type="submit" class="btn primary">Send</button>
-          <p id="contact-status" class="sr-only" aria-live="polite"></p>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send</button>
+            <span id="contact-status" class="contact-status sr-only" aria-live="polite"></span>
+          </div>
         </form>
 
         <div class="contact-info">
@@ -171,9 +195,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>&copy; <span id="year"></span> Natalia Rico. Built with HTML, CSS, JS.</p>
+      <p>&copy; <span id="year"></span> Natalia Rico. Built with HTML, CSS & JS.</p>
     </div>
   </footer>
 
