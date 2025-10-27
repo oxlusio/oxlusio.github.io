@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name — academic and technical projects." />
+  <title>Natalia Rico — Computer Engineering Student</title>
+  <meta name="description" content="Portfolio of Natalia Rico — academic and technical projects in computer engineering." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">Your Name</a>
+      <a class="brand" href="#home">Natalia Rico</a>
       <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
@@ -33,16 +33,15 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1>Hi, I'm Your Name</h1>
-          <p>Computer Science student and developer — I build web apps, data projects, and open-source tools.</p>
+          <h1>Hi, I'm Natalia Rico</h1>
+          <p>Computer Engineering student at the University of New Mexico. I build hardware designs, embedded systems, and web tools to showcase academic and technical work.</p>
           <p class="cta-row">
             <a class="btn primary" href="#projects">See my work</a>
             <a class="btn ghost" href="#contact">Get in touch</a>
           </p>
         </div>
-        <div class="hero-image" role="img" aria-label="Illustration of laptop with code">
-          <!-- Replace with your photo or illustration -->
-          <div class="placeholder-avatar">Your Photo</div>
+        <div class="hero-image" role="img" aria-label="Portrait or illustration">
+          <div class="placeholder-avatar">Natalia Rico</div>
         </div>
       </div>
     </section>
@@ -51,18 +50,19 @@
       <h2>About</h2>
       <div class="about-grid">
         <div>
-          <p>Short bio — your degree, interests, research areas, or what you enjoy building. Mention relevant accomplishments (awards, publications, internships).</p>
-          <p>Optional: link to CV, LinkedIn, GitHub, or downloadables.</p>
+          <p>I am a Computer Engineering student at the University of New Mexico (expected 2028). My interests include digital systems design, embedded hardware, and full-stack web development. I enjoy turning technical concepts into clean, demonstrable projects — from FPGA designs to interactive dashboards.</p>
+          <p>Experience includes IT support roles and customer-facing technical positions where I supported enterprise survey tools, helped troubleshoot systems, and maintained positive user interactions.</p>
           <p>
-            <a class="btn" href="#" aria-label="Download resume">Download Résumé</a>
+            <a class="btn" href="assets/Natalia-Rico-Resume.pdf" aria-label="Download résumé">Download Résumé (PDF)</a>
           </p>
         </div>
         <div>
           <ul class="about-list">
-            <li><strong>Location:</strong> City, Country</li>
-            <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
-            <li><strong>Education:</strong> B.Sc. Computer Science (expected 20XX)</li>
-            <li><strong>Interests:</strong> Web dev, ML, systems, teaching</li>
+            <li><strong>Location:</strong> Albuquerque, NM, USA</li>
+            <li><strong>Email:</strong> <a href="mailto:nrico@unm.edu">nrico@unm.edu</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+19154070475">(915) 407-0475</a></li>
+            <li><strong>Education:</strong> B.S. Computer Engineering — University of New Mexico (Expected 2028)</li>
+            <li><strong>Current roles:</strong> UNM IT Academic Technologies (IT Support Assistant), Lowe's (Customer Service)</li>
           </ul>
         </div>
       </div>
@@ -74,42 +74,53 @@
         <label>Filter:
           <select id="project-filter" aria-label="Filter projects">
             <option value="all">All</option>
+            <option value="hardware">Hardware</option>
             <option value="web">Web</option>
-            <option value="ml">ML</option>
-            <option value="research">Research</option>
+            <option value="data">Data</option>
           </select>
         </label>
       </div>
 
       <div class="projects-grid" id="projects-grid">
-        <!-- Project card example (duplicate & update for each project) -->
-        <article class="project-card" data-category="web">
-          <div class="project-screenshot" role="img" aria-label="Screenshot of Project A">Screenshot</div>
+        <article class="project-card" data-category="hardware">
+          <div class="project-screenshot" role="img" aria-label="8-bit ALU on FPGA">FPGA</div>
           <div class="project-body">
-            <h3 class="project-title">Project A — Web App</h3>
-            <p class="project-desc">Short description: what the project does, tech used, and your role.</p>
-            <p class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+            <h3 class="project-title">8-bit ALU Design (VHDL)</h3>
+            <p class="project-desc">Designed and tested an 8-bit arithmetic logic unit using VHDL, synthesized and deployed to an FPGA board (Xilinx). Implemented arithmetic, logic, and control signals with testbenches and timing analysis.</p>
+            <p class="project-tags"><span>VHDL</span><span>FPGA</span><span>Xilinx</span></p>
             <p class="project-links">
-              <a href="#" target="_blank" rel="noopener">Live</a> ·
-              <a href="#" target="_blank" rel="noopener">GitHub</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card" data-category="ml">
-          <div class="project-screenshot" role="img" aria-label="Screenshot of Project B">Screenshot</div>
-          <div class="project-body">
-            <h3 class="project-title">Project B — ML</h3>
-            <p class="project-desc">Short description with dataset, model type, and outcome (accuracy or findings).</p>
-            <p class="project-tags"><span>Python</span><span>scikit-learn</span></p>
-            <p class="project-links">
-              <a href="#" target="_blank" rel="noopener">Report</a> ·
               <a href="#" target="_blank" rel="noopener">Code</a>
             </p>
           </div>
         </article>
 
-        <!-- Add more project-card elements -->
+        <article class="project-card" data-category="web">
+          <div class="project-screenshot" role="img" aria-label="Personal portfolio screenshot">Portfolio</div>
+          <div class="project-body">
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <p class="project-desc">Responsive portfolio built with HTML, CSS, and JavaScript to showcase my academic and technical projects. Includes mobile navigation, project filtering, and a contact form.</p>
+            <p class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+            <p class="project-links">
+              <a href="https://oxlusio.github.io" target="_blank" rel="noopener">Live</a> ·
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="data">
+          <div class="project-screenshot" role="img" aria-label="Cost of Living Dashboard screenshot">Dashboard</div>
+          <div class="project-body">
+            <h3 class="project-title">Cost of Living Index Dashboard (ENG220)</h3>
+            <p class="project-desc">Interactive Streamlit web application that analyzes and visualizes cost-of-living data across global regions. Implemented data cleaning, plots, and user controls for comparison.</p>
+            <p class="project-tags"><span>Python</span><span>Streamlit</span><span>Data Viz</span></p>
+            <p class="project-links">
+              <a href="#" target="_blank" rel="noopener">Demo</a> ·
+              <a href="#" target="_blank" rel="noopener">Code</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Add more project-card elements as needed -->
       </div>
     </section>
 
@@ -118,15 +129,15 @@
       <div class="skills-grid">
         <div>
           <h3>Languages</h3>
-          <ul><li>JavaScript</li><li>Python</li><li>C/C++</li></ul>
+          <ul><li>C</li><li>C++</li><li>Python</li><li>VHDL</li><li>HTML & CSS</li><li>JavaScript (basic)</li></ul>
         </div>
         <div>
-          <h3>Frameworks & Tools</h3>
-          <ul><li>React</li><li>Node.js</li><li>Git</li></ul>
+          <h3>Tools & Frameworks</h3>
+          <ul><li>Git / GitHub</li><li>Visual Studio Code</li><li>MATLAB</li><li>Streamlit</li><li>Linux / Command Line</li></ul>
         </div>
         <div>
-          <h3>Other</h3>
-          <ul><li>SQL</li><li>Machine Learning</li><li>Unit testing</li></ul>
+          <h3>Hardware & Systems</h3>
+          <ul><li>Digital Logic Design</li><li>FPGA Simulation (Xilinx)</li><li>Microcontrollers (Arduino, Raspberry Pi)</li></ul>
         </div>
       </div>
     </section>
@@ -152,7 +163,8 @@
         </form>
 
         <div class="contact-info">
-          <p>Prefer email? <a href="mailto:you@example.com">you@example.com</a></p>
+          <p>Prefer email? <a href="mailto:nrico@unm.edu">nrico@unm.edu</a></p>
+          <p>Phone: <a href="tel:+19154070475">(915) 407-0475</a></p>
           <p>Find me on <a href="#" target="_blank" rel="noopener">GitHub</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a></p>
         </div>
       </div>
@@ -161,7 +173,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Your Name. Built with HTML, CSS, JS.</p>
+      <p>&copy; <span id="year"></span> Natalia Rico. Built with HTML, CSS, JS.</p>
     </div>
   </footer>
 
