@@ -1,206 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Natalia Rico — Computer Engineering Student</title>
-  <meta name="description" content="Portfolio of Natalia Rico — academic and technical projects in computer engineering." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalia Rico's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="brand" href="#home">Natalia Rico</a>
-
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
-        <button id="nav-toggle" aria-controls="primary-nav-list" aria-expanded="false" aria-label="Toggle menu">
-          <span class="hamburger" aria-hidden="true"></span>
-        </button>
-        <ul id="primary-nav-list" class="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section id="home" class="hero" aria-label="Introduction">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Hi, I'm Natalia Rico</h1>
-          <p class="lead">Computer Engineering student at the University of New Mexico. I work on FPGA designs, embedded systems, and web tools to make technical work easy to explore.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="#projects">See my work</a>
-            <a class="btn ghost" href="#contact">Get in touch</a>
-          </div>
-          <ul class="quick-info">
-            <li><strong>Email:</strong> <a href="mailto:nrico@unm.edu">nrico@unm.edu</a></li>
-            <li><strong>Phone:</strong> <a href="tel:+19154070475">(915) 407-0475</a></li>
-            <li><strong>Education:</strong> B.S. Computer Engineering — UNM (Expected 2028)</li>
-          </ul>
-        </div>
-
-        <aside class="hero-card" aria-hidden="false">
-          <img src="assets/portrait-placeholder.jpg" alt="Portrait of Natalia Rico" class="hero-avatar" />
-          <div class="hero-meta">
-            <p class="role">Computer Engineering • FPGA & Embedded Systems</p>
-            <a class="btn" href="assets/Natalia-Rico-Resume.pdf" download>Download Résumé</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about container" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
-      <div class="about-grid">
-        <div class="about-body">
-          <p>I’m a Computer Engineering student at the University of New Mexico with hands-on experience in digital logic, FPGA simulation, and technical support roles. I enjoy turning technical coursework and lab work into clear, shareable projects — whether hardware, embedded software, or web visualizations.</p>
-          <p>Currently I support enterprise survey tooling and IT assistance at UNM and work part-time in customer-facing technical roles that sharpen communication and troubleshooting skills.</p>
-        </div>
-
-        <div class="about-stats">
-          <dl>
-            <dt>Location</dt><dd>Albuquerque, NM, USA</dd>
-            <dt>Email</dt><dd><a href="mailto:nrico@unm.edu">nrico@unm.edu</a></dd>
-            <dt>Phone</dt><dd><a href="tel:+19154070475">(915) 407-0475</a></dd>
-            <dt>Expected Degree</dt><dd>B.S. Computer Engineering — 2028</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="projects container" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-
-      <div class="projects-controls">
-        <label for="project-filter">Filter:</label>
-        <select id="project-filter" aria-label="Filter projects">
-          <option value="all">All</option>
-          <option value="hardware">Hardware</option>
-          <option value="web">Web</option>
-          <option value="data">Data</option>
-        </select>
-      </div>
-
-      <div class="projects-grid" id="projects-grid">
-        <article class="project-card" data-category="hardware">
-          <figure class="project-media">
-            <img src="assets/alu-screenshot.jpg" alt="8-bit ALU on FPGA board">
-            <figcaption>8-bit ALU running on Xilinx FPGA</figcaption>
-          </figure>
-          <div class="project-content">
-            <h3>8-bit ALU Design (VHDL)</h3>
-            <p class="project-desc">Implemented an 8-bit arithmetic logic unit in VHDL, created testbenches, and synthesized to a Xilinx FPGA. Verified arithmetic, logical ops, and timing constraints.</p>
-            <p class="project-meta"><span>VHDL</span> • <span>FPGA</span> • <span>Xilinx</span></p>
-            <p class="project-links">
-              <a href="#" target="_blank" rel="noopener">Code</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card" data-category="web">
-          <figure class="project-media">
-            <img src="assets/portfolio-screenshot.jpg" alt="Personal portfolio screenshot">
-            <figcaption>Responsive portfolio — HTML, CSS, JS</figcaption>
-          </figure>
-          <div class="project-content">
-            <h3>Personal Portfolio Website</h3>
-            <p class="project-desc">Responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript. Features project filtering, mobile nav, and accessible form UI.</p>
-            <p class="project-meta"><span>HTML</span> • <span>CSS</span> • <span>JavaScript</span></p>
-            <p class="project-links">
-              <a href="https://oxlusio.github.io" target="_blank" rel="noopener">Live</a> · <a href="#" target="_blank" rel="noopener">GitHub</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card" data-category="data">
-          <figure class="project-media">
-            <img src="assets/col-dashboard.jpg" alt="Cost of Living Dashboard screenshot">
-            <figcaption>Streamlit dashboard for cost-of-living data</figcaption>
-          </figure>
-          <div class="project-content">
-            <h3>Cost of Living Index Dashboard</h3>
-            <p class="project-desc">Interactive Streamlit application that analyzes cost-of-living datasets with visual comparisons across regions. Built data-cleaning pipeline and visualization components.</p>
-            <p class="project-meta"><span>Python</span> • <span>Streamlit</span> • <span>Data Viz</span></p>
-            <p class="project-links">
-              <a href="#" target="_blank" rel="noopener">Demo</a> · <a href="#" target="_blank" rel="noopener">Code</a>
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="skills container" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <div class="skills-grid">
-        <div>
-          <h3>Languages</h3>
-          <ul><li>C</li><li>C++</li><li>Python</li><li>VHDL</li><li>HTML/CSS</li><li>JavaScript (basic)</li></ul>
-        </div>
-        <div>
-          <h3>Tools & Frameworks</h3>
-          <ul><li>Git / GitHub</li><li>VS Code</li><li>MATLAB</li><li>Streamlit</li><li>Linux</li></ul>
-        </div>
-        <div>
-          <h3>Hardware</h3>
-          <ul><li>Digital Logic Design</li><li>FPGA (Xilinx)</li><li>Arduino / Raspberry Pi</li></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact container" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <div class="contact-grid">
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="form-row">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" required />
-            </label>
-          </div>
-
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Send</button>
-            <span id="contact-status" class="contact-status sr-only" aria-live="polite"></span>
-          </div>
-        </form>
-
-        <div class="contact-info">
-          <p>Prefer email? <a href="mailto:nrico@unm.edu">nrico@unm.edu</a></p>
-          <p>Phone: <a href="tel:+19154070475">(915) 407-0475</a></p>
-          <p>Find me on <a href="#" target="_blank" rel="noopener">GitHub</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Natalia Rico. Built with HTML, CSS & JS.</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js" defer></script>
+    <header>
+        <nav>
+            <button id="nav-toggle">Toggle Navigation</button>
+            <ul id="nav-list">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>Natalia Rico</h1>
+            <p>Welcome to my portfolio! Here you can find my projects and contact information.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="project-list">
+                <!-- Project items will be added here -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
